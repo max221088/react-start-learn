@@ -1,14 +1,18 @@
 import React from "react"
 import Header from "./components/header"
-
+import Products from "./components/products"
 
 class app extends React.Component {
   
   render () {
     return (
-      <header>
+      <div>
         <Header/>
-      </header>
+        <main>
+          <Products/>
+        </main>
+        <aside></aside>
+      </div>
     )
   }
 

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,42 +8,31 @@
 body {
   background-color: #333;
   color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
 
-.logo{
-  width: 30px;
-  height: auto;
-}
 .header {
-  background-color: black;
+  background-color: #222;
+  font-weight: 500;
+  padding: 20px;
 }
-.cart {
-  width: 150px;
-  height: auto;
-  border: 1px solid #fff;
-  margin: 10px;
+main{
+  margin: 50px 100px;
+  width: 80%;
+  float: left;
+}
+aside{
+  width: 20%;
+  float: left;
+}
+.cart-container{
+  display: flex;
+}
+.cart{
+  width: 40%;
+  margin-left: 20px;
   padding: 10px;
-  border-radius: 5px;
-}
-.car-name{
-  font-size: 14px;
-  color:#fff;
-}
-.car-properties{
-  font-size: 12px;
-  color: #aaa;
-  margin-top: 5px;
-}
-.name{
-  width: 250px;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #aaa;
-}
-.user{
-  margin: 10px;
-  padding: 10px;
-  width: 250px;
-  border: 1px solid #aaa;
+  background-color: rgb(5, 91, 91);
   border-radius: 5px;
 }
