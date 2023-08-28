@@ -11,20 +11,22 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
-
 .header {
   background-color: #222;
   font-weight: 500;
   padding: 20px;
 }
 main{
-  margin: 50px 100px;
-  width: 80%;
+  margin: 50px 2%;
+  width: 70%;
   float: left;
 }
-aside{
-  width: 20%;
-  float: left;
+aside {
+	width: 15%;
+	margin-top: 30px;
+	margin-left: 5%;
+	margin-right: 5%;
+	float:right;
 }
 .cart-container{
   display: flex;
@@ -35,4 +37,43 @@ aside{
   padding: 10px;
   background-color: rgb(5, 91, 91);
   border-radius: 5px;
+}
+.icon{
+	float: right;
+	width: 30px;
+	height: inherit;
+	cursor: pointer;
+	
+}
+.icon:hover{
+	opacity: 0.6;
+}
+
+aside form input:not([type="checkbox"]),
+aside form textarea,
+aside form button {
+    width: 90%;
+    padding: 15px 5%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin-bottom: 10px;
+    border: 0;
+    background: #222;
+    color: #fff;
+    outline: none;
+    font-size: 15px;
+}
+
+aside form input[type="checkbox"] {
+    margin: 10px;
+}
+
+aside form button {
+    width: 100%;
+    cursor: pointer;
+    transition: transform 500ms ease;
+}
+
+aside form button:hover {
+    transform: scale(1.1);
 }
