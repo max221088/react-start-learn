@@ -44,8 +44,7 @@ class app extends React.Component {
   }
 	addProduct (product) {
 		product.id = this.state.products.length + 1;
-		this.setState({products: this.state.products.push(product)})
-		console.log(this.state.products)
+		this.setState({products: [...this.state.products, product]})
 	}
 }
 export default app
