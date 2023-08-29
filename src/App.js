@@ -27,6 +27,8 @@ class app extends React.Component {
 			]
 		}
 		this.addProduct = this.addProduct.bind(this)
+		this.deleteProduct = this.deleteProduct.bind(this)
+		this.editProduct = this.editProduct.bind(this)
 	}
 
   render () {
@@ -34,7 +36,9 @@ class app extends React.Component {
       <div>
         <Header/>
         <main>
-          <Products products={this.state.products}/>
+          <Products products={this.state.products} 
+					onEdit={this.editProduct}
+					onDelete={this.deleteProduct}/>
         </main>
         <aside>
 					<AddProduct onAdd={this.addProduct}/>
@@ -42,6 +46,18 @@ class app extends React.Component {
       </div>
     )
   }
+	editProduct(product) {
+		let allProducts = this.state.products
+		allProducts[product.id - 1] = product
+		this.setState({products: []}, () => {
+			this.setState({products: [...allProducts]})
+		})
+	}
+	deleteProduct (id) {
+		this.setState({
+			products: this.state.products.filter((el) => el.id !== id)
+		})
+	}
 	addProduct (product) {
 		product.id = this.state.products.length + 1;
 		this.setState({products: [...this.state.products, product]})

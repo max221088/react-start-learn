@@ -7,7 +7,9 @@ class Products  extends React.Component {
       return (
         <div className="cart-container">
           {this.props.products.map((product) => (
-						<Product key={product.id} product={product }/>
+						<Product key={product.id} product={product} 
+						onEdit={this.props.onEdit}
+						onDelete={this.props.onDelete}/>
 					))}
         </div>
       )
