@@ -5,6 +5,7 @@ class Header  extends React.Component {
     return (
       <header className="header">
         All Products
+				<button onClick={this.props.onDeleteAll} className="btn">Delete All Product</button>
       </header>
     )
   }

@@ -92,3 +92,8 @@ form button:hover {
 .cart form button:hover{
 	transform: scale(1.01);
 }
+
+.btn{
+	margin: 5px;
+	padding: 5px;
+}

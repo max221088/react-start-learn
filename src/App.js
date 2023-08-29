@@ -29,12 +29,13 @@ class app extends React.Component {
 		this.addProduct = this.addProduct.bind(this)
 		this.deleteProduct = this.deleteProduct.bind(this)
 		this.editProduct = this.editProduct.bind(this)
+		this.deleteAllProduct = this.deleteAllProduct.bind(this)
 	}
 
   render () {
     return (
       <div>
-        <Header/>
+        <Header onDeleteAll={this.deleteAllProduct}/>
         <main>
           <Products products={this.state.products} 
 					onEdit={this.editProduct}
@@ -52,6 +53,10 @@ class app extends React.Component {
 		this.setState({products: []}, () => {
 			this.setState({products: [...allProducts]})
 		})
+	}
+	deleteAllProduct () {
+		console.log(1)
+		this.setState({products: []})
 	}
 	deleteProduct (id) {
 		this.setState({
