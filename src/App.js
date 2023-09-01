@@ -2,29 +2,18 @@ import React from "react"
 import Header from "./components/header"
 import Products from "./components/products"
 import AddProduct from "./components/addProduct"
+import axios from "axios"
+
+const baseUrl = "https://fakestoreapi.com/products"
 
 class app extends React.Component {
   constructor (props) {
 		super (props)
+		axios.get(baseUrl).then((res) => {
+			this.setState({products: res.data})
+		})
 		this.state = {
-			products: [
-				{
-					id: 1,
-					title: "dress",
-					category: "cloth",
-					price: "124",
-					active: true,
-					description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown Lorem ipsum "
-				},
-				{
-					id: 2,
-					title: "boots",
-					category: "shoes",
-					price: "250",
-					active: false,
-					description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown Lorem ipsum "
-				}
-			]
+			products: [	]
 		}
 		this.addProduct = this.addProduct.bind(this)
 		this.deleteProduct = this.deleteProduct.bind(this)

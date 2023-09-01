@@ -40,6 +40,10 @@ aside {
   background-color: rgb(5, 91, 91);
   border-radius: 5px;
 }
+.product-img {
+	width: 100px;
+	height: inherit;
+}
 .icon{
 	float: right;
 	width: 30px;

@@ -17,6 +17,7 @@ class User extends React.Component {
 				< IoHammerSharp onClick={()=> this.setState({
 					isEdit: !this.state.isEdit
 				})} className="icon edit" />
+				<img class="product-img" src={this.product.image} alt="Foto" ></img>
 				<h3>Title: {this.product.title}</h3>
 				<h4>Category: {this.product.category}</h4>
 				<h4>Price: {this.product.price}</h4>
